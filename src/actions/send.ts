@@ -6,7 +6,7 @@ import {
   IEvent,
   SendOptions,
   SimpleEvent,
-} from '../types';
+} from '../types/def';
 
 export function send<
   TC extends IContext,

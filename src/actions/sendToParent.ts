@@ -6,7 +6,7 @@ import {
   NOmit,
   SendOptions,
   SimpleEvent,
-} from '../types';
+} from '../types/def';
 import { send } from './send';
 
 export function sendToParent<

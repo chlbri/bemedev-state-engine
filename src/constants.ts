@@ -5,4 +5,4 @@ export const TARGETS = {
   current: '#_se.current_#',
 } as const;
 
-
+export const DEFAULT_DELIMITER = '.' as const;

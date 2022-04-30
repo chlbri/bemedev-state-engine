@@ -1,5 +1,5 @@
 import { START_EVENT } from './constants';
-import { Action, IEvent } from './types';
+import { Action, IEvent } from './types/def';
 
 export class ActionScheduler<TC extends object, TE extends IEvent> {
   private _processing = false;
