@@ -1,10 +1,10 @@
 {
   "name": "gitpod-typescript",
   "version": "0.0.1",
-  "description": "https://github.com/chlbri/gitpod-typescript.git",
+  "description": "https://github.com/chlbri/bemedev-state-engine.git",
   "author": "chlbri <bri_lvi@icloud.com>",
   "license": "MIT",
-  "main":"index.js",
+  "main": "index.js",
   "typings": "index.d.ts",
   "scripts": {
     "tsc": "tsc",
@@ -19,24 +19,30 @@
     "git-push": "git push --tags"
   },
   "devDependencies": {
+    "@bemedev/test": "^0.0.4",
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.174",
+    "@swc/jest": "^0.2.20",
     "@types/faker": "^6.6.9",
-    "@types/jest": "^27.4.0",
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
-    "dayjs": "^1.10.7",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "dayjs": "^1.11.1",
     "edit-json-file": "^1.7.0",
-    "eslint": "^8.9.0",
+    "eslint": "^8.14.0",
     "faker": "^6.6.6",
     "immer": "^9.0.12",
     "jest": "^27.5.1",
     "jest-cucumber": "^3.0.1",
     "jest-extended": "^2.0.0",
-    "nanoid": "^3.3.1",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "shelljs": "^0.8.5",
-    "ts-jest": "^27.1.3",
-    "typescript": "^4.5.5"
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.4"
   },
-  "repository": "https://github.com/chlbri/gitpod-typescript.git"
+  "dependencies": {
+    "nanoid": "^3.3.3"
+  },
+  "repository": "https://github.com/chlbri/bemedev-state-engine.git"
 }
