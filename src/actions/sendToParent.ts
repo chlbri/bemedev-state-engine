@@ -1,4 +1,4 @@
-import { TARGETS } from '../constants';
+import { TARGETS } from '@/constants';
 import {
   ExpressionEvent,
   IContext,
@@ -6,7 +6,7 @@ import {
   NOmit,
   SendOptions,
   SimpleEvent,
-} from '../types';
+} from '@/types';
 import { send } from './send';
 
 export function sendToParent<

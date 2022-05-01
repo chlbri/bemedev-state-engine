@@ -1,11 +1,11 @@
 {
-  "name": "gitpod-typescript",
+  "name": "@bemedev/state-engine",
   "version": "0.0.1",
-  "description": "https://github.com/chlbri/bemedev-state-engine.git",
+  "description": "Beautifull and simple State Charts",
   "author": "chlbri <bri_lvi@icloud.com>",
   "license": "MIT",
-  "main": "index.js",
-  "typings": "index.d.ts",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "tsc": "tsc",
     "tsc-w": "tsc -w",
@@ -32,13 +32,13 @@
     "eslint": "^8.14.0",
     "faker": "^6.6.6",
     "immer": "^9.0.12",
-    "jest": "^27.5.1",
+    "jest": "^27",
     "jest-cucumber": "^3.0.1",
     "jest-extended": "^2.0.0",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "shelljs": "^0.8.5",
-    "ts-jest": "^27.1.4",
+    "tsconfig-to-swcconfig": "^1.5.0",
     "typescript": "^4.6.4"
   },
   "dependencies": {
