@@ -1,8 +1,8 @@
-import { IContext, IEvent } from '../def';
-import { Transition } from '../event';
-import { PromiseFunction } from '../functions';
+import { PromiseFunction } from '../../functions';
+import { IContext } from '../context';
+import { IEvent, Transition } from '../event';
 
-export type InvokeBase<TC extends IContext, TE extends IEvent, R = TC> = {
+export type PromiseBase<TC extends IContext, TE extends IEvent, R = TC> = {
   src: PromiseFunction<[TC, TE], R>;
   id: string;
 } & (

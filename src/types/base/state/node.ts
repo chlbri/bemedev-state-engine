@@ -1,10 +1,12 @@
-import { Action, IContext, IEvent } from '../def';
-import { Transition } from '../event';
-import { InvokeBase } from './invoke';
+import { Action } from '../action';
+import { IContext } from '../context';
+import { IEvent, Transition } from '../event';
+import { PromiseBase } from './invoke';
 import { StateValue } from './types';
 
 export type StateNodeType =
   | 'atomic'
+  | 'machine'
   | 'compound'
   | 'parallel'
   | 'async'
@@ -16,7 +18,8 @@ export class StateNode<
   R = unknown,
 > {
   type: StateNodeType = 'atomic';
-  invoke?: InvokeBase<TC, TE, R>;
+  promise?: PromiseBase<TC, TE, R>;
+  subMachine?: StateNode;
   readonly directStates: StateNode<TC, TE>[] = [];
   readonly transitions: Transition<TC, TE>[] = [];
   readonly tags: string[] = [];

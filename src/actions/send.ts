@@ -1,12 +1,12 @@
-import { nanoid } from 'nanoid';
-import { TARGETS } from '../constants';
+import { TARGETS } from '@/constants';
 import {
   ExpressionEvent,
   IContext,
   IEvent,
   SendOptions,
   SimpleEvent,
-} from '../types/def';
+} from '@/types';
+import { nanoid } from 'nanoid';
 
 export function send<
   TC extends IContext,
