@@ -36,6 +36,10 @@ export class StateNode<
     this.directStates.push(...states);
   };
 
+  readonly clearStates = () => {
+    this.directStates.length = 0;
+  };
+
   private computeChildrenStates() {
     this.directStates.forEach(state => {
       state._parent = this._name;
@@ -94,7 +98,7 @@ export class StateNode<
   private static computeValue<
     TC extends IContext = IContext,
     TE extends IEvent = IEvent,
-  >(state: StateNode<TC, TE>, parentIsParallel = false) {
+  >(state: StateNode<TC, TE>, parentIsParallel = false): StateValue {
     if (state.type !== 'parallel') {
       if (parentIsParallel) {
         return {};
@@ -127,7 +131,7 @@ export class StateNode<
     return out;
   }
 
-  get value() {
+  get value(): StateValue {
     return StateNode.computeValue(this as unknown as StateNode);
   }
 

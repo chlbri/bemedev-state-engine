@@ -1,18 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 
-// #region Make a library
-/** @type {import('typescript').CompilerOptions} */
-const { compilerOptions } = require('./tsconfig.json');
-
 function escapeRegex(str) {
   return str.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
 }
 
-function pathsToModuleNameMapper(
-  mapping = compilerOptions.paths,
-  prefix = '<rootDir>',
-) {
+function pathsToModuleNameMapper(mapping, prefix = '<rootDir>') {
   const jestMap = {};
   for (const fromPath of Object.keys(mapping)) {
     let pattern;
@@ -55,10 +48,14 @@ function pathsToModuleNameMapper(
 
   return jestMap;
 }
+
+// #region Make a library
+/** @type {import('typescript').CompilerOptions} */
+const { compilerOptions } = require('./tsconfig.json');
 // #endregion
 
 module.exports = {
-  moduleNameMapper: pathsToModuleNameMapper(),
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
   transform: {
     '^.+\\.(t|j)sx?$': ['@swc/jest'],
   },
