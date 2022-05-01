@@ -4,7 +4,7 @@
     "moduleResolution": "node",
     "module": "CommonJS",
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "./lib",
     "rootDir": "./src",
 
     "strict": true,
